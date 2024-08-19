@@ -25,7 +25,7 @@ function empty_order() {
 
 //q6
 function add_to_order(x, y) {
-    return x * math_pow(10, (math_floor(math_log10(x)))) + y;
+    return x * math_pow(10, (math_floor(math_log10(x)) + 1)) + y;
 }
 
 //q7
@@ -44,8 +44,8 @@ function combo_price_abstraction(x) {
 }
 
 //q10
-function add_to_order_corrections(x) {
-    return x + y * 10
+function add_to_order_corrections(x, y) {
+    return x + y * 10;
 }
 
 //problem1
