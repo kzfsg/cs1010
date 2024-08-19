@@ -1,0 +1,15 @@
+//L2
+import { stack_frac, show, heart, nova } from "rune";
+
+function cost_finder(r) {
+    return 199.5 * (math_PI * 2 * r);
+}
+
+
+//recursion
+
+function stackn(n, rune) {
+    return n === 1 ? rune : stack_frac(1/n, rune, stackn(n-1, rune));
+}
+
+show(stackn(5, heart));
