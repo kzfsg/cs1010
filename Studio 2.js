@@ -15,7 +15,7 @@ function is_biggie_size(x) {
 
 //q4
 function combo_price(x) {
-    return (x > 4 ? (x-4) * 1.17 + 0.5 : x * 1.17);
+    return (x > 4 ? (x - 4) * 1.17 + 0.5 : x * 1.17);
 }
 
 //q5
@@ -37,6 +37,20 @@ function last_combo (x) {
 function other_combos(x) {
    return math_floor(x/10);  
  }
+ 
+//q9
+function combo_price_abstraction(x) {
+    return is_biggie_size ? x * 1.17 + 0.5 : x * 1.17;
+}
+
+//q10
+function add_to_order_corrections(x) {
+    return x + y * 10
+}
+
+//problem1
+//conjunction - p ? q : false;
+//disjunction - p ? true : q;
  
 biggie_size(1);
 unbiggie_size(5);
