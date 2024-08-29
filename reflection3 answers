@@ -1,0 +1,714 @@
+// Session code: 5b5a9d
+// Attendance: 21322812
+
+// I forgot to give my deets last time:
+
+// Me Telegram: @gracefuuu
+// Me Email: gracetan@nus.edu.sg
+
+// Send me stufffff
+
+// RULES
+
+// 1) DO NOT WRITE YOUR NAME
+// 2) DO NOT WRITE YOUR NAME
+// 3) DO NOT WRITE YOUR NAME
+// 4) DO NOT laugh at others for writing wrong solutions!
+// 5) Try your best!
+// 6) You can spy on other solutions for inspiration!
+// 7) BUT DO NOT blindly copy without understanding!
+
+// ========================================
+{
+// ========================================
+// Q0: "Reserve" your favourite number by typing
+//     your favourite food (or anything unique)
+//     after it:
+
+// 0: Iced Latte from Paris Baguette Tiong Bahru
+// 1: unagi
+// 2: idk man
+// 3: 
+// 4: bananar
+// 5:
+// 6: apple tree
+// 7: tiramisu cake
+// 8: potato
+// 9:
+// 10: ( ͡° ͜ʖ ͡°) 
+// 11: no
+// 12: egg
+// 13:
+// 14: beff noddle sop
+// 15: udon
+// 16: cuptoast
+// 17:fish
+// 18:
+// 19: chicken
+// 20:
+// 21: basil pork rice
+// 22: wingstop
+// 23:
+// 24:
+// 25: ambrosia
+// 26: seal
+// 27: real
+// 28: 123456789
+// 29: PGP Mala
+
+// ========================================
+}
+{
+// ========================================
+// QZ: Who watched the lecture XD
+
+// Type your answer AFTER your number
+
+// 0: I forgot
+// 1:yes
+// 2: until 3am ofc
+// 3:
+// 4: yes
+// 5:
+// 6: slay
+// 7: Perchance
+// 8: NOPE
+// 9:
+// 10: Definitely(not)
+// 11: perhaps
+// 12: yes
+// 13:
+// 14: yes
+// 15: yes 
+// 16: yes (probably kinda maybe)
+// 17: yes
+// 18:
+// 19: yes
+// 20:
+// 21: me
+// 22:
+// 23:
+// 24:
+// 25:
+// 26: yes
+// 27:
+// 28: Yes
+// 29: Yes
+
+// ========================================
+}
+{
+// ========================================
+// QA: Warmup
+//     What's the result of this program?
+
+{
+function frob(x, y) {
+    if (x > y) {
+        const z = x + y;
+        return z * x;
+    } else {
+        return y;
+    }
+}
+
+raw_display("QA: Uncomment for answers!");
+display(frob(2, 1), "QA: frob(2, 1) =");
+
+frob(2, 1);
+}
+
+// Type your answer AFTER your number
+
+// 0: 42
+// 1: 6
+// 2:
+// 3:
+// 4: 6
+// 5:
+// 6:7
+// 7: 6
+// 8: 6 ( ͡° ͜ʖ ͡°)
+// 9:
+// 10: 6
+// 11: 六
+// 12:
+// 13:
+// 14: 6
+// 15: 6
+// 16: 6
+// 17: 6
+// 18:
+// 19: 6
+// 20:
+// 21: QA: frob(2, 1) = 6 
+// 22:
+// 23:
+// 24:
+// 25:
+// 26: 6
+// 27:
+// 28: 6
+// 29: 6
+
+// ========================================
+}
+{
+// ========================================
+// QB: Warmup
+//     What's the result of this program?
+
+{
+function f(g, x) {
+    return g(g(x));
+}
+function make_times(x) {
+    return y => x * y;
+}
+raw_display("QB: Uncomment for answers!");
+// display(f(make_times(10), 10), "QB: f(make_times(10), 10) =");
+
+f(make_times(10), 10);
+}
+
+// 0: 42
+// 1: 1000
+// 2:
+// 3:
+// 4: 1000
+// 5:
+// 6: 1000!!! 
+// 7: at least 2 (1000)
+// 8:
+// 9:
+// 10: 1000
+// 11: one thousand
+// 12:
+// 13:
+// 14:
+// 15: 1000
+// 16: 1000
+// 17: 1000
+// 18:
+// 19:
+// 20:
+// 21: QB: f(make_times(10), 10) = 1000
+// 22:
+// 23:
+// 24:
+// 25:
+// 26: 1000
+// 27: 1000
+// 28: 1000
+// 29: 1000
+
+// ========================================
+}
+{
+// ========================================
+// QC: Warmup
+//     What's the result of this program?
+
+{
+const x = 42;
+const k = x => y => x;
+raw_display("QC: Uncomment for answers!");
+// display(k(666)(x), "QC: k(666)(x) =");
+
+666;
+}
+
+// 0: 42
+// 1: 666
+// 2: 
+// 3:
+// 4: 
+// 5:
+// 6: 666
+// 7: 666
+// 8: 666
+// 9:
+// 10: 666
+// 11: six six six
+// 12: 666
+// 13:
+// 14: 666
+// 15: 666
+// 16: 666
+// 17:
+// 18:
+// 19: 666
+// 20:
+// 21: QC: k(666)(x) = 666
+// 22:
+// 23:
+// 24:
+// 25: 666
+// 26: 666
+// 27:
+// 28: 666
+// 29: 
+
+// ========================================
+}
+{
+// ========================================
+// Q1: Use the substitution model to
+//     "manually" run the following program
+//     (you can use the space below for "working").
+
+{
+const z = 1;
+
+function f(g) {
+    const z = 3;
+    return g(z);
+}
+
+display(f(y => y + z), "Q1:");
+}
+
+// 0: 42
+// 1: 2
+// 2:
+// 3:
+// 4: 4 || 2
+// 5:
+// 6:
+// 7: 4, 2
+// 8: 2
+// 9:
+// 10: 4
+// 11: 2
+// 12: 2
+// 13:
+// 14: 2
+// 15: 2
+// 16: 4
+// 17: 4
+// 18:
+// 19: 
+// 20:
+// 21: Q1: 4
+// 22:
+// 23:
+// 24:
+// 25 4
+// 26: 4
+// 27: 2
+// 28: 2
+// 29: 4
+
+// ========================================
+}
+{
+// ========================================
+// Q2: Write a function `my_sum` that
+//     computes the following sum, for n >= 1,
+//     **without** higher-order functions:
+//
+
+// my_sum(n - 1)
+//   1 * 2
+// + 2 * 3
+// + ...
+// + (n - 1) * (n)
+
+// my_sum(0) = 0 * 1
+// my_sum(1) = 1 * 2
+// my_sum(n) = my_sum(n - 1) + n * (n + 1)
+//   0 * 1
+//   1 * 2
+// + 2 * 3
+// + ...
+// + n * (n + 1)
+
+// Type your solution BELOW your number
+// When you're done, please **comment out your solution**!
+
+// Template:
+// function my_sum(n) { return <your answer here>; }
+
+// 0:
+{
+function my_sum(n) { return 42; }
+display(my_sum(1), "Q2: my_sum(1) =");
+display(my_sum(2), "Q2: my_sum(2) =");
+display(my_sum(3), "Q2: my_sum(3) =");
+}
+// 1: 
+function my_sum(n) {
+    return n === 0
+    ? 0
+    : (n+1) * n + my_sum(n-1);
+}
+
+my_sum(3);
+// 1: function my_sum(n) {
+//    return n === 0
+//    ? 0
+//    : (n+1) * n + my_sum(n-1);
+//}
+// 2: 
+// 4: function my_sum(n){return n === 1 ? 1 * 2 : my_sum(n - 1) + (n * (n + 1)); }
+// 5:
+// 6:
+// 7: function my_sum(n) {return n < 1 ? 0 : n * (n + 1) + my_sum(n - 1);}
+// 8: 
+// 9:
+// 10: 
+// function my_sum(n) { return n === 1 ? 2 : n*(n+1) + my_sum(n-1);}
+// 11: function my_sum(n) { return n === 1 ? 2 : n * (n + 1) + my_sum(n - 1); }
+// 12:
+// 13:
+// 14:function my_sum(n) { return n === 1 ? 2 : n * (n + 1) + my_sum(n - 1);} 
+// 15:
+// 16:
+/*{
+function my_sum(n) {
+    return n === 1
+        ? 2
+        : n * (n + 1) + my_sum(n - 1);
+}
+}*/
+// 17:
+// 18:
+// 19:
+// function my_sum(n) {
+//     return n === 0
+//     ? 0
+//     : (n + 1) * n + my_sum(n - 1);
+// }
+// 20:
+// 21: function my_sum(a, b, n) {
+//     return a > n
+//         ? b
+//         : my_sum(a + 1, b + (a*(a+1)), n);
+//      }
+// 
+// 22:
+// 23:
+// 24:
+// 25:
+// 26: 
+//  function my_sum(n) {
+// 	    return n === 0
+// 		    ? 0
+// 		    : (n + 1) * n + my_sum(n-1);
+// }
+
+// 27: function my_sum(n){
+//              return n===1
+//              ?2
+//              :(n+1)*n+my_sum(n-1);
+//      }
+// 28: function mysum(n){
+//              return n === 0 ? 0 : n * (n + 1) + my_sum(n - 1);
+//}
+// 29: function my_sum(n) {
+//             return n === 1 
+//             ? 1 * 2 
+//             : n * (n + 1) + my_sum(n - 1);
+//      }
+    
+    
+    
+
+// ========================================
+}
+{
+// ========================================
+// Q3: Does the function `my_sum` you wrote in Question 2
+//     give rise to a recursive process
+//              or an iterative process?
+//     What is the order of growth in time and in space,
+//     using Big-Theta notation?
+
+// 0: Recurtative. Theta(42) time, Theta(42) space.
+raw_display("Q3: <answer>");
+// 1: recursive, theta(n) time, theta((n)) space
+// 2:
+// 3:
+// 4: recursive, time: theta(2n), space: theta(n)
+// 5:
+// 6: recursive, theta(n)
+// 7: recursive, theta(n)
+// 8: recursive, theta(n) time & space
+// 9:
+// 10: recursive, theta(n) time, theta(n) space
+// 11: recursive, theta(n) time, theta(n) space
+// 12: recursive, theta(n) time, theta(n) space
+// 13:
+// 14: recursive, theta(n) time and space.
+// 15: recursive, theta(n) time, theta(n) space
+// 16: Recursive, Theta(n) time, Theta(n) space.
+// 17:recursive, theta(n) time, theta(n) space
+// 18: 
+// 19: recursive, 
+// 20:
+// 21: iterative, theta(n) time, theta(1) space.
+// 22: recursive, theta(n) time, theta(n) space
+// 23:
+// 24:
+// 25:
+// 26: recursive, theta(n) time, theta(n) space
+// 27: recursive, time:theta(n),space:theta(n)
+// 28: recursive, theta(n) time, theta(n) space
+// 29:
+
+// ========================================
+}
+{
+// ========================================
+// QD: Who wants a recap of the
+//     sum function from lecture?
+
+function sum(term, a, next, b) {
+    return a > b
+           ? 0
+           : term(a) + sum(term, next(a), next, b);
+}
+
+// 0: Yes
+// 1: yeye
+// 2: 
+// 3:
+// 4: maybe
+// 5:
+// 6: meeeee
+// 7: naur
+// 8: 
+// 9: 
+// 10: Dont think its needed
+// 11: 
+// 12: yes
+// 13:
+// 14: a
+// 15: yes yes yes
+// 16: up to u 
+// 17:
+// 18:
+// 19:
+// 20:
+// 21: 
+// 22: sure just in case i understand wrong
+// 23:
+// 24:
+// 25:
+// 26: no
+// 27: yes, please man
+// 28: Y
+// 29: ok
+
+// ========================================
+}
+{
+// ========================================
+// Q4: We can also define `my_sum` in terms of the
+//     higher-order function `sum`.
+//     Complete the declaration of `my_sum` below.
+//     You cannot change the definition of `sum`;
+//     you may only call it with appropriate arguments.
+function sum(term, a, next, b) {
+    return a > b
+           ? 0
+           : term(a) + sum(term, next(a), next, b);
+}
+
+// Template:
+// function my_sum2(n) {
+//     return sum(<T1>, <T2>, <T3>, <T4>);
+// }
+
+// 0:
+{
+function my_sum2(n) {
+    return sum(x => x * (x + 1), 1, x => x + 1, n)
+}
+display(my_sum2(1), "Q4: my_sum2(1) =");
+display(my_sum2(2), "Q4: my_sum2(2) =");
+display(my_sum2(3), "Q4: my_sum2(3) =");
+}
+// 1:
+// function my_sum(n) { return a => a*(a+1), 1, a=>a+1, n }
+// 2:
+// 3:
+// 4: T1 : x => x * (x+1) T2: 1 , T3: x => x + 1, T4: n
+// 5:
+// 6:
+// 7:
+// 8: 
+// 9:
+// 10: function my_sum(n) {return sum(x=>x*(x+1),1, x=>x+1,n);}
+// 11: function my_sum(n) { return sum(x => x * (x + 1), 1, x => x + 1, n); }
+// 12: function my_sum(n) {return sum(x => x * (x + 1), 1, x => x + 1, n); }
+// 13:
+// 14: T1: x => x * (x + 1) T2: 2 T3: x => x + 1 T4: n 
+// 15: function my_sum(n) {return sum(x => x * (x + 1), 1, x => x + 1, n); }
+// 16: 
+/*{
+function my_sum(n) { return sum(x => x * (x + 1), 1, x => x + 1, n); }
+}*/
+// 17: T1: x => x  t2: 1 , t3: x + 1 t4: n
+// 18:
+// 19:
+// 20:
+// 21: 
+// function my_sum2(n) {
+//     return sum(x => x * (x + 1), 1, x => x + 1, n);
+// }
+// 22: function my_sum2(n) {return sum()
+// 23:
+// 24:
+// 25: 
+// 26: function my_sum(n) { return sum(x => x * (x+1), 1, x => x + 1, n); }
+// 27: 
+// 28: function my_sum2(n) {
+//        return sum(x => x * (x + 1), 1, x => x + 1 , n);  
+//}
+// 29: 
+
+// ========================================
+}
+{
+// ========================================
+// Q5: Write an iterative version of `sum`.
+
+// 0:
+{
+function sum(term, a, next, b, result) {
+    return a > b ? result : sum(term, next(a), next, b, result + term(a));
+}
+function sum2(term, a, next, b) {
+    return term(a) + term(next(a));
+}
+display(sum2(x => x, 1, x => x + 1, 10),
+        "Q5: sum(1..10) =");
+}
+// 1:
+// 2:
+// 3:
+// 4:
+// 5:
+// 6:
+// 7:
+// 8:
+// 9:
+// 10: function sum(term,a,next,b,start){return sum(term,next(a),next,b)
+// 11:
+// function sum(term, a, next, result) {
+//     return a === 0 ? result : sum(term, a - 1, next, result + term(a));
+// }
+// sum(x => x + (x + 1), 10, x => x - 1, 0);
+// 12:
+// 13:
+// 14: function sum(total, a, next, b) { return a > b ? total : sum(total + a, next(a), next, b)} 
+// 15:
+// 16:
+/*{
+function sum(a, b) {
+    return sum_iter(term, a, next, b, 0); 
+}
+function sum_iter(term, a, next, b, acc) {
+    return a > b 
+        ? acc
+        : sum_iter(term, next(a), next, b, acc + term(a));
+}
+}*/
+// 17:
+// 18:
+// 19:
+// 20:
+// 21:
+// function my_sum(a, b, n) {
+//     return a > n
+//         ? b 
+// // b stores result, always start with input as 0
+//         : my_sum(a + 1, b + (a*(a+1)), n);
+// }
+// 22:
+// 23:
+// 24:
+// 25:
+// 26: 
+//  function sum(curr_sum, term, a, next, b) {
+//      return (a > b) 
+//          ? curr_sum
+//          : sum(curr_sum + term(a), term, next(a), next, b);
+// }
+
+// 27:
+// 28:
+// 29:
+
+// ========================================
+}
+{
+// ========================================
+// Q6: Quiz!
+//     (a) What names are declared by this program?
+//     (b) Which declaration does each
+//         name occurrence refer to?
+//     (c) What is the value of (f(x => 2 * x))(4)?
+//     (d) What is the value of g(y => y + 2, x)?
+
+{
+const x = 5;
+
+function f(g) {
+    const x = 3;
+    return x => x + g(x);
+}
+
+function g(f, y) {
+    const h = (y, f) => y(f);
+    return h(f, y);
+}
+
+raw_display("Q6: Uncomment for answers!");
+// display((f(x => 2 * x))(4), "Q6c: (f(x => 2 * x))(4) =");
+// display(g(y => y + 2, x), "Q6d: g(y => y + 2, x) =");
+}
+
+// No numbers, too long for everyone to type haha
+
+// ========================================
+}
+{
+// ========================================
+// QE: Bonus
+//     If a tree falls in the forest, does it make a sound?
+//     What is the output of this program?
+
+{
+const forest = tree => tree;
+const fire = fuel => fire;
+const my_house = me => my_house(me);
+raw_display("QE: Uncomment for answers!");
+// display(forest(fire(my_house))(1)(2), "QE: forest(fire(my_house))(1)(2) =");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+undefined;
