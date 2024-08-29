@@ -1,0 +1,31 @@
+// q1
+const z = 1;
+
+function f(g) {
+    const z = 3;
+    return g(z);
+}
+
+f(y => y + z);
+
+// q2
+function my_sum1(n) {
+    return n === 0
+    ? 0
+    : (n+1) * n + my_sum1(n-1);
+}
+
+my_sum1(3);
+
+//q4
+function sum(term, a, next, b) {
+    return a > b
+    ? 0
+    : term(a) + sum(term, next(a), next, b);
+}
+
+function my_sum2(n) {
+    return sum(term(a => a*(a+1)), 1, next(a=> a+1), n);
+}
+
+my_sum2(3);
