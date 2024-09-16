@@ -1,0 +1,30 @@
+function is_member(m, xs) {
+    return is_null(member(m, xs))
+    ? false
+    : true ;
+}
+
+function accumulate(op, initial, xs) {
+return is_null(xs)
+    ? initial
+    : op(head(xs), accumulate(op, initial, tail(xs)));
+}
+
+function remove_duplicates(lst) {
+    return accumulate((x,y) => 
+    is_member(x, y)
+    ? remove_duplicates(y)
+    : pair(x, remove_duplicates(y)), null, lst);
+    
+    // if (is_null(lst)) {
+    //     return lst
+    // }
+    // if (is_member(head(lst), tail(lst))) {
+        
+    // }
+    // else {
+    //     return 0
+    // }
+}
+
+remove_duplicates(list(1, 2, 3, 4, 4, 3, 2, 1, 2));
