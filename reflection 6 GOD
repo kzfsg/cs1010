@@ -1,0 +1,843 @@
+`
+Session code: 209b24
+Attendance: 41809821
+
+Join the session and "reserve" your number at Q0
+
+After the session, save this to a text file for
+your future reference, or alternatively you can
+ask me to send you the template!
+
+Me Telegram: @gracefuuu
+Me Email: gracetan@nus.edu.sg
+Send me stufffff
+
+
+
+Admin stuff
+
+Next week: recess week
+Next next week: zoom midterm review
+                (i'll still come to the room at the
+                 usual time to answer questions)
+Next next next week: back to usual
+
+
+Common lecture issue: Symbolic Processing
+ - No time to recap during the reflection! :(
+ - If you want, follow me after the reflection
+   and we'll go find a meeting room.
+   
+
+MIDTERM WILL COVER
+
+| All material up to and including Week 6's
+| Lectures, Paths, Reflections, Studios (excluding
+| Bonus Topic: Continuation-Passing Style (CPS),
+| and Lecture L6B: Streams I).
+
+In other words everything until and including today!
+
+Looking at past year papers, the typical questions are:
+
+- List notation, box notation, box ptr diagram
+- Recursive and iterative process
+- List manipulations:
+  - map/filter/accumulate
+  - but also "boring" stuff like list_ref/length/...
+- Order of growth (practice this! it can be tricky!)
+  - Self-check: https://forms.gle/1jCuQHKeSGaZXBuS6
+  - ^-- Provided by Reflection Tutor Eldric Liew!
+- Working with *abstractions*, e.g.
+  - BSTs (make_tree, etc)
+  - Active lists, a functional version of lists kinda
+    like curves/sounds
+  - Dictionaries (list of pairs)
+  - etc... (they can invent a new abstraction you've
+    not seen before for the midterm!)
+  - Think on your feet and think "mathematically"
+- Working with sorted things, e.g.
+  - subsequence
+  - subset
+  - set difference
+  - sorted trees
+- Tricky questions: twice/thrice stuff
+`;
+
+// ====================================================
+{
+// ====================================================
+`
+Q0: 'Reserve' your favourite number by typing
+    your favourite number (or anything unique)
+    after it:
+`;
+
+// 0: 42 (after reserving go straight to warmup)
+// 1: (after reserving go straight to warmup)
+// 2: 800
+// 3: 33
+// 4: 4
+// 5: 1101
+// 6: (after reserving go straight to warmup)
+// 7: 7
+// 8: (after reserving go straight to warmup)
+// 9: (after reserving go straight to warmup)
+// 10: 10
+// 11: 11 (after reserving go straight to warmup)
+// 12: (after reserving go straight to warmup)
+// 13: (after reserving go straight to warmup)
+// 14: (after reserving go straight to warmup)
+// 15: (after reserving go straight to warmup)
+// 16: (after reserving go straight to warmup)
+// 17: (after reserving go straight to warmup)
+// 18: (after reserving go straight to warmup)
+// 19: (after reserving go straight to warmup)
+// 20: (after reserving go straight to warmup)
+// 21: (after reserving go straight to warmup)
+// 22: (after reserving go straight to warmup)
+// 23: (after reserving go straight to warmup)
+// 24: (after reserving go straight to warmup)
+// 25: (after reserving go straight to warmup)
+// 26: 26 (after reserving go straight to warmup)
+// 27: (after reserving go straight to warmup)
+// 28: (after reserving go straight to warmup)
+// 29: 12345(after reserving go straight to warmup)
+
+// ====================================================
+}
+{
+// ====================================================
+`
+QA: PERSONAL WARMUP (5 min)
+
+Do as much as you can on your own private document
+while students are still walking in.
+Feel free to do at home for more practice!
+Answers are at the bottom of the playground.
+
+(These are meant to be self-checks, if you're finding
+ them very difficult, you might want to ask me for
+ more practice questions!)
+`;
+
+//  - max = largest number in list
+//          (you can assume list is nonempty!)
+//    max(list(2, 7, 5)) = 7
+//    (in path you did recursive version,
+//     now try accumulate version!)
+// const max = xs =>
+//     accumulate(___, ___, xs);
+
+//  - sum_sq = sums squares of the elements
+//    sum_sq(list(1, 2, 3)) = 1*1 + 2*2 + 3*3
+// const sum_sq = xs =>
+//     accumulate(
+//         ___,
+//         0,
+//         map(x => ___, xs));
+
+//  - sum_sq2 = same as just now
+//    sum_sq2(list(1, 2, 3)) = 1*1 + 2*2 + 3*3
+// const sum_sq2 = xs =>
+//     accumulate(___, 0, xs);
+
+//  - height = how deep is the tree
+//             (most nested `list`)
+//    height(list(1, 2)) = 1
+//    height(list(1, list(2))) = 2
+//    height(list(list(1), list(2))) = 2
+//    height(list()) = 1
+// const height = tree =>
+//     ___ ? ___ :
+//     max(map(child => ___,
+//             tree));
+
+//  - equal = true if the lists are same, else false
+//    equal(list(1, 2, 3), list(1, 2, 3)) = true
+//    equal(list(1, 2, 2), list(1, 2, 3)) = false
+//    equal(list(1, 2), list(1, 2, 3)) = false
+// const equal = (xs, ys) =>
+//     is_null(xs) && is_null(ys) ? true
+//     : ___ ? false
+//     : ___ ? false
+//     : ___ && equal(tail(xs), tail(ys));
+
+//  - starts_with = whether xs starts with ys
+//    starts_with(list(1, 2, 3), list(1, 2, 3)) = true
+//    starts_with(list(1, 2, 3), list(1, 2)) = true
+//    starts_with(list(1, 2), list(1, 2, 3)) = false
+//    (Use take/drop as required)
+// const starts_with = (xs, ys) =>
+//     equal(___, ___);
+
+`BONUS TRICK QUESTION`;
+//  - height2 = same as before
+//              (most nested `list`)
+// const height2 = tree => accumulate_tree(
+//     child => ___, // f
+//     (childres, acc) => ___, // op
+//     ___, // initial
+//     tree);
+
+`
+Need even more practice?
+
+Redo missions, quests, and reflection questions
+you previously struggled with!
+
+It's possible that the first time you solved a
+particular question that it took you 3 hours to debug.
+
+My opinion is that that's not the best way to learn,
+since it makes you better at debugging and guess and
+check but doesn't really make you better at writing
+code the right way first try.
+
+Now that you have more experience, see if you can
+revisit some of these questions and solve them
+"properly", using recursion and wishful thinking.
+Ideally, there's a logical path in your thinking and
+it leads to the solution instantly.
+
+If you're comfortable with recursion but not with
+accumulate/map/etc, you can also revisit the recent
+sounds missions/quests and try to solve as many of
+them using list functions!
+
+Some examples of list questions that you might've
+initially solved with recursion, but you can actually
+use map/filter/accumulate/etc. for:
+
+- consecutively from Premorseal Communications
+- echo from Echoes of the Past
+- generate_list_of_note from Musical Diversions
+  - (You might want to use reverse here)
+`;
+
+// ====================================================
+}
+{
+const op = (x, acc) => x + acc;
+const f = x => x * x;
+const initial = 0;
+const xs = enum_list(1, 3);
+const list_sum = xs => accumulate(op, 0, xs);
+// ====================================================
+`
+DEMO FOR LAST WEEK: accumulate / map transformations
+If you have a pattern like
+    accumulate(..., ..., map(..., xs));
+you can always transform it into just accumulate
+`;
+
+accumulate(
+    (x, acc) => op(x, acc),
+    initial,
+    map(x => f(x), xs));
+
+`
+list(1,       2,       3);
+list(f(1),    f(2),    f(3));
+op  (f(1), op(f(2), op(f(3), initial)));
+     ^~~^  ^~~~~~~~~~~~~~~~~~~~~~~~~~^
+      x                acc
+op2 (1, op(f(2), op(f(3), initial)));
+     ^  ^~~~~~~~~~~~~~~~~~~~~~~~~~^
+     x                acc
+`;
+
+accumulate(
+    (x, acc) => op(f(x), acc),
+    initial,
+    xs);
+
+`
+Last week I showed either this, or a very similar
+variant to you guys:
+`;
+
+{
+function accumulate_tree(f,
+                         op,
+                         initial,
+                         tree) {
+    return accumulate(op, initial,
+        map(child =>
+              is_list(child)
+              ? accumulate_tree(f, op, initial, child)
+              : f(child),
+            tree)
+        );
+}
+}
+
+`
+Since it's in accumulate map form, we can actually
+simplify it:
+`;
+
+{
+function accumulate_tree(f,
+                         op,
+                         initial,
+                         tree) {
+    return accumulate(
+        (child, acc) => op(
+            is_list(child)
+            ? accumulate_tree(f, op, initial, child)
+            : f(child),
+            acc),
+        initial,
+        tree);
+}
+}
+
+`The more generalized version can't be simplified:`;
+
+function tree_combine(f_data, f_tree, tree) {
+    return f_tree(
+        map(child =>
+                is_list(child)
+                ? tree_combine(f_data, f_tree, child)
+                : f_data(child),
+            tree));
+}
+
+`BTW, we can simplify tree_sum as well:`;
+
+{
+function tree_sum(tree) {
+    return accumulate(
+        (childsum, acc) => childsum + acc,
+        0,
+        map(child =>
+                is_list(child)
+                ? tree_sum(child)
+                : child,
+            tree)
+        );
+}
+}
+
+{
+function tree_sum(tree) {
+    return accumulate(
+        (child, acc) =>
+            (is_list(child)
+             ? tree_sum(child)
+             : child)
+            + acc,
+        0,
+        tree);
+}
+}
+
+// ====================================================
+}
+{
+// ====================================================
+`
+Q1 WARMUP: What does insert_cmp do
+
+What's the result of:
+
+(a) insert_cmp(3, list(1, 4, 2), (a, b) => a < b);
+(b) Describe "in english" the behaviour of
+    insert_cmp as accurately as you can.
+--- I'll go through (a) and (b) first
+--- then you guys can finish (cdef)
+(c) insert_cmp(3, list(1, 4, 2), (a, b) => a > b);
+(d) insert_cmp(3, list(1, 4, 2), (a, b) => b === 2);
+(e) insert_cmp(3, list(1, 4, 2), (a, b) => false);
+(f) insert_cmp(3, list(1, 4, 2), (a, b) => true);
+`;
+
+`
+0:  (a) 1234 (b) inserts x at the position where 42
+    (c) 1234 (d) 1234 (e) 1234 (f) 1234
+1:  (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+2:  (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+3:  (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+4:  (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+5:  (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+6:  (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+7:  (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+8:  (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+9:  (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+10: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+11: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+12: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+13: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+14: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+15: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+16: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+17: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+18: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+19: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+20: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+21: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+22: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+23: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+24: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+25: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+26: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+27: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+28: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+29: (a) ____ (b) __________________
+    (c) ____ (d) ____ (e) ____ (f) ____
+`;
+
+// ====================================================
+}
+{
+// ====================================================
+`
+Q1: Write appropriate comparison functions that
+    result in the desired output.
+
+    Fill in the blank:
+    insertion_sort_cmp(xs, (a, b) => ___);
+
+(a) ascending order
+    wish: list(1, 2, 3, 4, 5, 6, 7, 8, 9)
+    want: list(1, 2, 3, 4, 5, 6, 6, 7, 8, 9)
+                                 ^-- insert 6 here
+
+    wish: list(1, 2, 3, 4, 5, 6, 7, 8, 9)
+               ^~~~~~~~~~~~~~~^
+                these should cmp to false
+    wish: list(1, 2, 3, 4, 5, 6, 7, 8, 9)
+                                 ^~~~~~^
+                these should cmp to true
+
+(b) descending order
+    Result: list(9, 8, 7, 6, 6, 5, 4, 3, 2, 1)
+
+(c) reverse the list
+    wish: list(7, 2, 4, 6, 9, 1, 5, 8, 3)
+    want: list(7, 2, 4, 6, 9, 1, 5, 8, 3, 6)
+                        insert 6 at end --^
+
+    wish: list(7, 2, 4, 6, 9, 1, 5, 8, 3)
+               ^~~~~~~~~~~~~~~~~~~~~~~~^
+                these should cmp to false
+
+(d) evens in ascending order,
+    then odds in descending order
+    wish: list(2, 4, 6, 8, 9, 7, 5, 3, 1)
+    want: list(2, 4, 6, 6, 8, 9, 7, 5, 3, 1)
+                        ^-- insert 6 here
+
+    wish: list(2, 4, 6, 8, 9, 7, 5, 3, 1)
+               ^~~~~~^
+                these should cmp to false
+    wish: list(2, 4, 6, 8, 9, 7, 5, 3, 1)
+                        ^~~~~~~~~~~~~~~^
+                these should cmp to true
+`;
+
+// We'll do (d) together since it's long
+
+`
+0:  (a) a === 42 (b) a === 42 (c) a === 42
+1:  (a) ___ (b) ___ (c) ___
+2:  (a) ___ (b) ___ (c) ___
+3:  (a) ___ (b) ___ (c) ___
+4:  (a) ___ (b) ___ (c) ___
+5:  (a) ___ (b) ___ (c) ___
+6:  (a) ___ (b) ___ (c) ___
+7:  (a) ___ (b) ___ (c) ___
+8:  (a) ___ (b) ___ (c) ___
+9:  (a) ___ (b) ___ (c) ___
+10: (a) ___ (b) ___ (c) ___
+11: (a) ___ (b) ___ (c) ___
+12: (a) ___ (b) ___ (c) ___
+13: (a) ___ (b) ___ (c) ___
+14: (a) ___ (b) ___ (c) ___
+15: (a) ___ (b) ___ (c) ___
+16: (a) ___ (b) ___ (c) ___
+17: (a) ___ (b) ___ (c) ___
+18: (a) ___ (b) ___ (c) ___
+19: (a) ___ (b) ___ (c) ___
+20: (a) ___ (b) ___ (c) ___
+21: (a) ___ (b) ___ (c) ___
+22: (a) ___ (b) ___ (c) ___
+23: (a) ___ (b) ___ (c) ___
+24: (a) ___ (b) ___ (c) ___
+25: (a) ___ (b) ___ (c) ___
+26: (a) ___ (b) ___ (c) ___
+27: (a) ___ (b) ___ (c) ___
+28: (a) ___ (b) ___ (c) ___
+29: (a) ___ (b) ___ (c) ___
+`;
+
+// ====================================================
+}
+{
+function take(xs, n) {
+    return n === 0 ? null
+        : pair(head(xs), take(tail(xs), n - 1));
+}
+function drop(xs, n) {
+    return n === 0 ? xs : drop(tail(xs), n - 1);
+}
+// ====================================================
+`
+Q2a: What is the runtime of merge?
+
+    We'll define r(n) to be the total # of calls made
+    to merge, then find the order of growth of r(n)
+    in terms of Theta/O/Omega (pick a suitable one).
+
+    BONUS Q: Why is r(n) a good proxy for the runtime?
+
+    (BTW, we want the **worst case runtime**.
+     If you don't know what that means,
+     it'll be covered in lecture soon,
+     just ignore.
+
+     If you're very impatient to know,
+     I wrote a short writeup at the bottom)
+`;
+
+// merge two sorted lists into one sorted list
+function merge(xs, ys) {
+    if (is_null(xs)) {
+        return ys;
+    } else if (is_null(ys)) {
+        return xs;
+    } else {
+        const x = head(xs);
+        const y = head(ys);
+        return x < y
+               ? pair(x, merge(tail(xs), ys))
+               : pair(y, merge(xs, tail(ys)));
+    }
+}
+
+// 0:  r(n) = 42, (worst case) growth = Ometha(42)
+// 1:  r(n) = ___, (worst case) growth = ___
+// 2:  r(n) = ___, (worst case) growth = ___
+// 3:  r(n) = ___, (worst case) growth = ___
+// 4:  r(n) = ___, (worst case) growth = ___
+// 5:  r(n) = ___, (worst case) growth = ___
+// 6:  r(n) = ___, (worst case) growth = ___
+// 7:  r(n) = ___, (worst case) growth = ___
+// 8:  r(n) = ___, (worst case) growth = ___
+// 9:  r(n) = ___, (worst case) growth = ___
+// 10: r(n) = ___, (worst case) growth = ___
+// 11: r(n) = ___, (worst case) growth = ___
+// 12: r(n) = ___, (worst case) growth = ___
+// 13: r(n) = ___, (worst case) growth = ___
+// 14: r(n) = ___, (worst case) growth = ___
+// 15: r(n) = ___, (worst case) growth = ___
+// 16: r(n) = ___, (worst case) growth = ___
+// 17: r(n) = ___, (worst case) growth = ___
+// 18: r(n) = ___, (worst case) growth = ___
+// 19: r(n) = ___, (worst case) growth = ___
+// 20: r(n) = ___, (worst case) growth = ___
+// 21: r(n) = ___, (worst case) growth = ___
+// 22: r(n) = ___, (worst case) growth = ___
+// 23: r(n) = ___, (worst case) growth = ___
+// 24: r(n) = ___, (worst case) growth = ___
+// 25: r(n) = ___, (worst case) growth = ___
+// 26: r(n) = ___, (worst case) growth = ___
+// 27: r(n) = ___, (worst case) growth = ___
+// 28: r(n) = ___, (worst case) growth = ___
+// 29: r(n) = ___, (worst case) growth = ___
+
+// ====================================================
+}
+{
+function middle(n) { return math_floor(n / 2); }
+function take(xs, n) {
+    return n === 0 ? null
+        : pair(head(xs), take(tail(xs), n - 1));
+}
+function drop(xs, n) {
+    return n === 0 ? xs : drop(tail(xs), n - 1);
+}
+function merge(xs, ys) {
+    if (is_null(xs)) {
+        return ys;
+    } else if (is_null(ys)) {
+        return xs;
+    } else {
+        const x = head(xs);
+        const y = head(ys);
+        return x < y
+               ? pair(x, merge(tail(xs), ys))
+               : pair(y, merge(xs, tail(ys)));
+    }
+}
+// ====================================================
+`
+Q2b (demo?): What is the runtime of merge_sort?
+
+Assume:
+- middle takes Theta(1) time
+- take and drop takes Theta(n) time
+
+i)   Draw out the call graph
+ii)  What is the "self" runtime of each call?
+iii) Is there a smart way to add everything up?
+
+No playground stuff for this qn.
+`;
+
+// a list with more than one element is sorted
+// by splitting it into two lists of (almost) equal
+// length, sorting the halves and then merging them
+// together
+function merge_sort(xs) {
+    if (is_null(xs) || is_null(tail(xs))) {
+        return xs;
+    } else {
+        const mid = middle(length(xs));
+        return merge(merge_sort(take(xs, mid)),
+                     merge_sort(drop(xs, mid)));
+    }
+}
+
+// ====================================================
+}
+{
+// ====================================================
+`
+OPTIONAL READING ABOUT WORST CASE RUNTIME
+
+Before, we dealt with functions (in the program sense)
+whose resource function (in the math sense)
+was just a normal function.
+
+    # of recursive calls in factorial(n) = n - 1
+
+We could call that r(n) = n - 1, then analyze big O
+
+    r(n) has order of growth Theta(n).
+
+However, we now start to deal with list functions,
+so the space of possible inputs is no longer just
+a single number, it's some kind of stuff.
+
+For example, we want to know how long length(xs) takes
+but we can't analyze the order of growth of "r(xs)".
+
+Instead, we define r(n) = the # of recursive calls
+length(xs) makes when run on a list of **size** n.
+
+We call n the *input parameter*, as we want to measure
+how the runtime (or space) grows with respect to this
+parameter. The standard parameter to use is **size**
+of the input.
+
+Here, it's still fine! length(xs) always makes exactly
+n recursive calls, so we can say r(n) = n.
+
+However, what if r(n) cannot be defined this way?
+
+For example,
+
+    map(square, filter(is_odd, xs));
+
+If we defined r(n) to be the # of calls to square
+and is_odd when evaluating this expression with
+xs set to a list of n numbers, then the # of calls
+is not well defined, as the # of calls to square
+depends on how many odd numbers there are in xs!
+
+Instead, we can consider the *worst case*, and
+define r(n) like so:
+
+    r(n) = max (# of calls to square and is_odd)
+           among (all possible list of numbers xs
+                  with length n)
+
+Now, r(n) *is* well defined, and we can calculate
+that the worst case is in fact r(n) = 2 * n.
+
+Basically, we're picking just 1 input to use to
+calculate the value of r(n), instead of assuming
+all inputs would result in the same r(n).
+When we do worst case, we pick the input that results
+in the worst r(n).
+
+This gives us the *worst case time complexity*
+of the above expression with respect to the length
+of the list xs: r(n) has order of growth Theta(n).
+
+Another option would have been to be *more precise*
+with our choice of parameters. Instead of just saying
+that n is the length of xs, we could have 2 parameters
+and say that:
+
+ - n is the length of xs
+ - m is the # of odd elements in xs
+
+Then it would once again be perfectly fine to say
+
+    r(m, n) = # of calls to square and is_odd
+              when xs has length n
+              and # of odd elements in xs is m
+
+and calculate that r(m, n) = m + n.
+
+Then we could say the time complexity with respect
+to these two input parameters is Theta(m + n).
+`;
+
+// ====================================================
+}
+{
+function take(xs, n) {
+    return n === 0 ? null
+        : pair(head(xs), take(tail(xs), n - 1));
+}
+function drop(xs, n) {
+    return n === 0 ? xs : drop(tail(xs), n - 1);
+}
+function accumulate_tree(f,
+                         op,
+                         initial,
+                         tree) {
+    return accumulate(
+        (child1, ops_of_remaining_children) =>
+            op(
+                is_list(child1)
+                    ? accumulate_tree(f, op, initial, child1)
+                    : f(child1),
+                ops_of_remaining_children),
+        initial,
+        tree);
+}
+
+// ====================================================
+`
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+Answers for warmup
+`;
+
+const max = xs => accumulate(
+    (x, acc) => x < acc ? acc : x,
+    head(xs),
+    xs);
+
+const sum_sq = xs =>
+    accumulate(
+        (x, acc) => x + acc,
+        0,
+        map(x => x * x, xs));
+
+const sum_sq2 = xs =>
+    accumulate((x, acc) => x * x + acc, 0, xs);
+
+const height = tree =>
+    is_null(tree) ? 1 :
+    max(map(child =>
+                is_list(child)
+                ? height(child) + 1
+                : 1,
+            tree));
+
+ const equal = (xs, ys) =>
+     is_null(xs) && is_null(ys) ? true
+     : is_null(xs) && !is_null(ys) ? false
+     : !is_null(xs) && is_null(ys) ? false
+     : head(xs) !== head(ys) &&
+       equal(tail(xs), tail(ys));
+
+ const starts_with = (xs, ys) =>
+     equal(take(xs, length(ys)), ys);
+
+const height2 = tree => accumulate_tree(
+    child => 0, // f
+    (childres, acc) =>
+        childres + 1 < acc ? acc : childres + 1, // op
+    1, // initial
+    tree);
+// ====================================================
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+undefined;
