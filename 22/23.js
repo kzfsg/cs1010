@@ -83,5 +83,12 @@ function insert(x, xs, cmp) {
 }
 
 function insert_sort(xs, cmp) {
-    return accumulate(y => insert(y, xs, cmp) t, null, xs)
+    return accumulate((y, ys) => insert(y, ys, cmp), null, xs)
 }
+
+function sort_pairs_by_sum(plist) {
+    const cmp = (x, y) => head(x) + tail(x) <= head(y) + tail(y);
+    return insert_sort(plist, cmp);
+}
+
+
