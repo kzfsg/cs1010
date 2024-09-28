@@ -61,3 +61,27 @@ is_list(list(1,2));
 // );
 
 // accumulate_tree( x => x, (x, y) => x > y ? x : y, 7.5, T );
+
+function find(ston, x) {
+
+    if (is_null(ston)) {
+        return false;
+    } else if (is_null(tail(ston))) {
+        return is_pair(head(ston)) ? find(head(ston), x) : x === head(ston);
+    } else {
+        
+}
+}
+
+
+find(my_ston, 12);
+find(my_ston, 3.5);
+
+
+
+
+
+
+
+
+
