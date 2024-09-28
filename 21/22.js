@@ -74,10 +74,14 @@ function find(ston, x) {
 }
 
 
-find(my_ston, 12);
-find(my_ston, 3.5);
 
+function append(xs, ys) {
+    return is_null(xs)
+    ? ys
+    : pair(head(xs), append(tail(xs), ys));
+}
 
+append(list(1), list(4,5,6));
 
 
 
